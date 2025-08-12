@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://q8g4t6fhql58"]
+
+[ext_resource type="Script" uid="uid://dyk1wd45rljde" path="res://archivekeeper/purple_box.gd" id="1_plhp5"]
+
+[node name="TextureRect" type="TextureRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_plhp5")

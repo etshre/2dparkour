@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://0vnsh7lq1isu"]
+
+[ext_resource type="Script" uid="uid://bvie1mmjesie5" path="res://archivekeeper/texture_rect.gd" id="1_3l6rp"]
+
+[node name="TextureRect" type="TextureRect"]
+custom_minimum_size = Vector2(16, 16)
+offset_right = 96.0
+offset_bottom = 96.0
+expand_mode = 1
+script = ExtResource("1_3l6rp")

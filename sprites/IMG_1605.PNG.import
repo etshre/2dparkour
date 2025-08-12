@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsayara2k52sd"
-path="res://.godot/imported/isometric_floor_tile.png-65830cf9d3516822c756d841844b8a69.ctex"
+uid="uid://8s62ypq7524l"
+path="res://.godot/imported/IMG_1605.PNG-621c4964ae85630150185ecd9c3b98ce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://archivekeeper/isometric_floor_tile.png"
-dest_files=["res://.godot/imported/isometric_floor_tile.png-65830cf9d3516822c756d841844b8a69.ctex"]
+source_file="res://archivekeeper/sprites/IMG_1605.PNG"
+dest_files=["res://.godot/imported/IMG_1605.PNG-621c4964ae85630150185ecd9c3b98ce.ctex"]
 
 [params]
 
