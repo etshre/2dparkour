@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://q8g4t6fhql58"]
+
+[ext_resource type="Script" uid="uid://dyk1wd45rljde" path="res://archivekeeper/scripts/purple_box.gd" id="1_0xs0p"]
+
+[node name="TextureRect" type="TextureRect"]
+custom_minimum_size = Vector2(16, 16)
+offset_right = 40.0
+offset_bottom = 40.0
+expand_mode = 1
+script = ExtResource("1_0xs0p")

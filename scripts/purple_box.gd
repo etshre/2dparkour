@@ -20,7 +20,8 @@ func _get_drag_data(_at_position):
 func _can_drop_data(_pos, data):
 	return data is Texture2D
 	
-func _drop_data(_pos, data):
+func _drop_data(_pos, _data):
+	#texture = data
 	texture = null
 	speed = 0
 	direction = 0
@@ -28,6 +29,8 @@ func _drop_data(_pos, data):
 var speed = 50
 var direction = 1 #1 is to the right
 
+var y = randi_range(-480, -310)
 
 func _process(delta):
-	position.x+= speed * direction * delta
+	position.x += speed * direction * delta
+	position.y = y

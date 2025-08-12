@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://bheo3tgta30wv"]
-
-[ext_resource type="Script" uid="uid://dukathbit7phn" path="res://archivekeeper/blue_box.gd" id="1_h67ua"]
-
-[node name="TextureRect" type="TextureRect"]
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("1_h67ua")

@@ -28,6 +28,8 @@ func _drop_data(_pos, data):
 var speed = 50
 var direction = 1 #1 is to the right
 
+var y = randi_range(-480, -310)
 
 func _process(delta):
-	position.x+= speed * direction * delta
+	position.x += speed * direction * delta
+	position.y = y

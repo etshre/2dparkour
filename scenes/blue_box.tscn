@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bheo3tgta30wv"]
+
+[ext_resource type="Script" uid="uid://dukathbit7phn" path="res://archivekeeper/scripts/blue_box.gd" id="1_3fg5k"]
+
+[node name="TextureRect" type="TextureRect"]
+custom_minimum_size = Vector2(16, 16)
+offset_right = 40.0
+offset_bottom = 40.0
+expand_mode = 1
+script = ExtResource("1_3fg5k")
