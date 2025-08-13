@@ -31,4 +31,5 @@ func _drop_data(pos, data):
 			texture = data["texture"]
 	else:
 		print("Error, _drop_data called with invalid data")
+	queue_free()
 			
