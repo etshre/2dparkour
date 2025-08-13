@@ -1,10 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://0vnsh7lq1isu"]
+[gd_scene load_steps=3 format=3 uid="uid://0vnsh7lq1isu"]
 
 [ext_resource type="Script" uid="uid://bvie1mmjesie5" path="res://archivekeeper/scripts/texture_rect.gd" id="1_3l6rp"]
+[ext_resource type="Texture2D" uid="uid://b6q8gp11o11to" path="res://archivekeeper/sprites/IMG_1606.PNG" id="1_no0tx"]
 
 [node name="TextureRect" type="TextureRect"]
 custom_minimum_size = Vector2(16, 16)
-offset_right = 96.0
-offset_bottom = 96.0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_no0tx")
 expand_mode = 1
 script = ExtResource("1_3l6rp")
+item_id = "pink"

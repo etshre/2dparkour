@@ -1,16 +1,14 @@
-[gd_scene load_steps=20 format=4 uid="uid://cqb0beqtw2kqm"]
+[gd_scene load_steps=18 format=4 uid="uid://cqb0beqtw2kqm"]
 
 [ext_resource type="Texture2D" uid="uid://dsayara2k52sd" path="res://archivekeeper/assets/isometric_floor_tile.png" id="1_0nn32"]
 [ext_resource type="Script" uid="uid://b3ba5u5f8vi2" path="res://archivekeeper/scripts/main.gd" id="1_unpdh"]
 [ext_resource type="Texture2D" uid="uid://so428qt2643" path="res://archivekeeper/sprites/IMG_1601.PNG" id="2_laynl"]
 [ext_resource type="Texture2D" uid="uid://qv48mw85d1st" path="res://archivekeeper/sprites/IMG_1602.PNG" id="3_00jh6"]
 [ext_resource type="Texture2D" uid="uid://pfcksc6wg4p1" path="res://archivekeeper/sprites/IMG_1604.PNG" id="4_ugcf2"]
-[ext_resource type="PackedScene" uid="uid://0vnsh7lq1isu" path="res://archivekeeper/scenes/Packet.tscn" id="5_j3pgy"]
-[ext_resource type="Texture2D" uid="uid://b6q8gp11o11to" path="res://archivekeeper/sprites/IMG_1606.PNG" id="6_unpdh"]
 [ext_resource type="PackedScene" uid="uid://bheo3tgta30wv" path="res://archivekeeper/scenes/blue_box.tscn" id="7_j3pgy"]
-[ext_resource type="Texture2D" uid="uid://b3yqssfe2w01o" path="res://archivekeeper/sprites/IMG_1607.PNG" id="8_unpdh"]
-[ext_resource type="PackedScene" uid="uid://q8g4t6fhql58" path="res://archivekeeper/scenes/purple_box.tscn" id="9_mf8v0"]
-[ext_resource type="Texture2D" uid="uid://dig02jt63ag6o" path="res://archivekeeper/sprites/IMG_1608.PNG" id="10_mrfc0"]
+[ext_resource type="Script" uid="uid://5e31t8sjn51e" path="res://archivekeeper/scripts/pink.gd" id="7_ugcf2"]
+[ext_resource type="Script" uid="uid://c4ve8dlwu5rg" path="res://archivekeeper/scripts/blue.gd" id="8_j3pgy"]
+[ext_resource type="Script" uid="uid://c1rxuu7njea4q" path="res://archivekeeper/scripts/purple.gd" id="9_unpdh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w7d04"]
 texture = ExtResource("1_0nn32")
@@ -18,21 +16,18 @@ texture_region_size = Vector2i(64, 32)
 0:0/0 = 0
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1sqrs"]
-load_path = "res://.godot/imported/IMG_1596.PNG-bab508d1c56fd4664f21f6d35062171b.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oqq4e"]
 texture = SubResource("CompressedTexture2D_1sqrs")
 texture_region_size = Vector2i(64, 32)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_veiga"]
-load_path = "res://.godot/imported/IMG_1598.PNG-448d8ecffd38cc784fdd7aeae820abba.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kuj8g"]
 texture = SubResource("CompressedTexture2D_veiga")
 texture_region_size = Vector2i(64, 32)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hk2h7"]
-load_path = "res://.godot/imported/IMG_1599.PNG-c934b4f21b63ea955ccfe6529ced9246.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_010l8"]
 texture = SubResource("CompressedTexture2D_hk2h7")
@@ -48,12 +43,13 @@ sources/3 = SubResource("TileSetAtlasSource_010l8")
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_unpdh")
+texture_rect_scene = ExtResource("7_j3pgy")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_7dm0k")
 format = 2
 
-[node name="Layer0" type="TileMapLayer" parent="TileMap"]
+[node name="Layer1" type="TileMapLayer" parent="TileMap"]
 use_parent_material = true
 tile_map_data = PackedByteArray("AAD//wAAAAAAAAAAAAD//wEAAAAAAAAAAAD//wIAAAAAAAAAAAD+//7/AAAAAAAAAAD///7/AAAAAAAAAAAAAP7/AAAAAAAAAAABAP7/AAAAAAAAAAAAAPz/AAAAAAAAAAD///z/AAAAAAAAAAD+/wEAAAAAAAAAAAD+/wAAAAAAAAAAAAD+////AAAAAAAAAAD/////AAAAAAAAAAAAAP//AAAAAAAAAAAAAAIAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAD+//3/AAAAAAAAAAD///3/AAAAAAAAAAAAAP3/AAAAAAAAAAABAAAAAAAAAAAAAAD9//z/AAAAAAAAAAD9//v/AAAAAAAAAAD+//r/AAAAAAAAAAD8//z/AAAAAAAAAAD7//v/AAAAAAAAAAD7//r/AAAAAAAAAAD7//j/AAAAAAAAAAD7//f/AAAAAAAAAAD8//b/AAAAAAAAAAD9//b/AAAAAAAAAAD9//f/AAAAAAAAAAD+//j/AAAAAAAAAAD9//n/AAAAAAAAAAD8//v/AAAAAAAAAAD8//r/AAAAAAAAAAD7//n/AAAAAAAAAAD8//j/AAAAAAAAAAD8//f/AAAAAAAAAAD9//j/AAAAAAAAAAD8//n/AAAAAAAAAAABAPr/AAAAAAAAAAABAPv/AAAAAAAAAAACAPz/AAAAAAAAAAADAPz/AAAAAAAAAAADAPv/AAAAAAAAAAAEAPr/AAAAAAAAAAAEAPj/AAAAAAAAAAADAPf/AAAAAAAAAAADAPb/AAAAAAAAAAACAPb/AAAAAAAAAAABAPf/AAAAAAAAAAABAPj/AAAAAAAAAAACAPj/AAAAAAAAAAACAPn/AAAAAAAAAAABAPn/AAAAAAAAAAACAPr/AAAAAAAAAAACAPv/AAAAAAAAAAADAPr/AAAAAAAAAAADAPn/AAAAAAAAAAADAPj/AAAAAAAAAAACAPf/AAAAAAAAAAD9////AAAAAAAAAAD///v/AAAAAAAAAAD//wMAAAAAAAAAAAABAP//AAAAAAAAAAACAP3/AAAAAAAAAAAAAPn/AAAAAAAAAAACAPX/AAAAAAAAAAAEAPn/AAAAAAAAAAD6//n/AAAAAAAAAAD8//X/AAAAAAAAAAD9//r/AAAAAAAAAAD+//n/AAAAAAAAAAD8//3/AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_7dm0k")
@@ -77,41 +73,26 @@ texture = ExtResource("4_ugcf2")
 scale = Vector2(0.5, 0.5)
 offset = Vector2(0, -200)
 
-[node name="pink box receive" parent="." instance=ExtResource("5_j3pgy")]
-offset_left = -28.0
-offset_top = -42.0
-offset_right = 32.0
-offset_bottom = 7.0
+[node name="pink" type="TextureRect" parent="."]
+offset_left = -31.0
+offset_top = -39.0
+offset_right = 31.0
+offset_bottom = 11.0
+script = ExtResource("7_ugcf2")
+accepts_item_id = "pink"
 
-[node name="pink sprite" parent="." instance=ExtResource("5_j3pgy")]
-offset_left = -444.0
-offset_top = -481.0
-offset_right = -384.0
-offset_bottom = -432.0
-texture = ExtResource("6_unpdh")
+[node name="blue" type="TextureRect" parent="."]
+offset_left = -222.0
+offset_top = -138.0
+offset_right = -160.0
+offset_bottom = -87.0
+script = ExtResource("8_j3pgy")
+accepts_item_id = "blue"
 
-[node name="blue box recieve" parent="." instance=ExtResource("7_j3pgy")]
-offset_left = -224.0
-offset_top = -137.0
-offset_right = -162.0
-offset_bottom = -91.0
-
-[node name="blue box sprite" parent="." instance=ExtResource("7_j3pgy")]
-offset_left = -515.0
-offset_top = -310.0
-offset_right = -453.0
-offset_bottom = -264.0
-texture = ExtResource("8_unpdh")
-
-[node name="purple box recieve" parent="." instance=ExtResource("9_mf8v0")]
+[node name="purple" type="TextureRect" parent="."]
 offset_left = 161.0
-offset_top = -135.0
+offset_top = -137.0
 offset_right = 223.0
-offset_bottom = -89.0
-
-[node name="purple box sprite" parent="." instance=ExtResource("9_mf8v0")]
-offset_left = -234.0
-offset_top = -392.0
-offset_right = -172.0
-offset_bottom = -346.0
-texture = ExtResource("10_mrfc0")
+offset_bottom = -83.0
+script = ExtResource("9_unpdh")
+accepts_item_id = "purple"

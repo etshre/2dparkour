@@ -1,10 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://bheo3tgta30wv"]
+[gd_scene load_steps=3 format=3 uid="uid://bheo3tgta30wv"]
 
 [ext_resource type="Script" uid="uid://dukathbit7phn" path="res://archivekeeper/scripts/blue_box.gd" id="1_3fg5k"]
+[ext_resource type="Texture2D" uid="uid://b3yqssfe2w01o" path="res://archivekeeper/sprites/IMG_1607.PNG" id="1_rhwlt"]
 
 [node name="TextureRect" type="TextureRect"]
 custom_minimum_size = Vector2(16, 16)
 offset_right = 40.0
 offset_bottom = 40.0
+texture = ExtResource("1_rhwlt")
 expand_mode = 1
 script = ExtResource("1_3fg5k")
+item_id = "blue"
