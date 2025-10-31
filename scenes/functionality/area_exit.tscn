@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxluav75ys0hn"]
+
+[ext_resource type="Script" uid="uid://dmoikuxfk3pbc" path="res://archivekeeper/scripts/area_exit.gd" id="1_ptyul"]
+[ext_resource type="Texture2D" uid="uid://xv7e58h82rg3" path="res://archivekeeper/assets/portal5_spritesheet.png" id="2_dj0h5"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fqe03"]
+
+[node name="AreaExit" type="Area2D" node_paths=PackedStringArray("sprite")]
+collision_layer = 65537
+script = ExtResource("1_ptyul")
+sprite = NodePath("Sprite2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -10
+texture = ExtResource("2_dj0h5")
+region_enabled = true
+region_rect = Rect2(32, 0, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_fqe03")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
