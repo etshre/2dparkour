@@ -5,7 +5,7 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fqe03"]
 
-[node name="AreaExit" type="Area2D" node_paths=PackedStringArray("sprite")]
+[node name="AreaExit" type="Area2D" node_paths=PackedStringArray("sprite") groups=["area_exits"]]
 collision_layer = 65537
 script = ExtResource("1_ptyul")
 sprite = NodePath("Sprite2D")

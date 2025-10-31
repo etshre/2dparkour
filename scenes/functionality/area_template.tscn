@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://du3sa2w88e0ah"]
+[gd_scene load_steps=7 format=3 uid="uid://du3sa2w88e0ah"]
 
 [ext_resource type="Texture2D" uid="uid://6rpxof2aqo3i" path="res://archivekeeper/assets/freetileset.png" id="1_ci4ng"]
 [ext_resource type="PackedScene" uid="uid://b10kc4l1g0a5j" path="res://archivekeeper/scenes/player.tscn" id="2_cq01y"]
 [ext_resource type="PackedScene" uid="uid://dxluav75ys0hn" path="res://archivekeeper/scenes/functionality/area_exit.tscn" id="3_y4d02"]
+[ext_resource type="PackedScene" uid="uid://bnoro1i7abbqb" path="res://archivekeeper/scenes/coin.tscn" id="4_ujjhx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cq01y"]
 texture = ExtResource("1_ci4ng")
@@ -1454,3 +1455,19 @@ layer_0/tile_data = PackedInt32Array(65534, 327680, 23, 65535, 327680, 23, 0, 32
 [node name="AreaExit" parent="." instance=ExtResource("3_y4d02")]
 position = Vector2(-53, -28)
 scale = Vector2(0.75, 0.75)
+
+[node name="Coins" type="Node2D" parent="."]
+position = Vector2(-53, -28)
+scale = Vector2(0.75, 0.75)
+
+[node name="Coin1" parent="Coins" instance=ExtResource("4_ujjhx")]
+position = Vector2(-45.3333, -42.6667)
+
+[node name="Coin2" parent="Coins" instance=ExtResource("4_ujjhx")]
+position = Vector2(-25.3333, -44)
+
+[node name="Coin3" parent="Coins" instance=ExtResource("4_ujjhx")]
+position = Vector2(-4, -44)
+
+[node name="Coin4" parent="Coins" instance=ExtResource("4_ujjhx")]
+position = Vector2(14.6667, -42.6667)

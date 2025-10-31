@@ -9,3 +9,15 @@ layer_0/tile_data = PackedInt32Array(65534, 327680, 23, 65535, 327680, 23, 0, 32
 
 [node name="AreaExit" parent="." index="2"]
 position = Vector2(214, -29)
+
+[node name="Coin1" parent="Coins" index="0"]
+position = Vector2(-38.6667, 26.6667)
+
+[node name="Coin2" parent="Coins" index="1"]
+position = Vector2(21.3333, 25.3333)
+
+[node name="Coin3" parent="Coins" index="2"]
+position = Vector2(153.333, 26.6667)
+
+[node name="Coin4" parent="Coins" index="3"]
+position = Vector2(269.333, 2.66667)

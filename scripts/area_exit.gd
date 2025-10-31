@@ -11,7 +11,7 @@ func _ready():
 func open():
 	#do stuff
 	is_open = true
-	sprite.region_rect.position.y = 32
+	sprite.region_rect.position.x = 32
 	
 func close():
 	is_open = false

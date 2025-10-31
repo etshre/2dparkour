@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://bnoro1i7abbqb"]
+[gd_scene load_steps=7 format=3 uid="uid://bnoro1i7abbqb"]
 
+[ext_resource type="Script" uid="uid://b7vqasvcneup5" path="res://archivekeeper/scripts/coin.gd" id="1_0u0um"]
 [ext_resource type="Texture2D" uid="uid://bebkm0btt8mbt" path="res://archivekeeper/assets/MonedaD.png" id="1_h1e5f"]
 
 [sub_resource type="Animation" id="Animation_0u0um"]
@@ -44,6 +45,7 @@ _data = {
 radius = 7.0
 
 [node name="Coin" type="Area2D"]
+script = ExtResource("1_0u0um")
 
 [node name="Node2D" type="Node2D" parent="."]
 
@@ -51,6 +53,7 @@ radius = 7.0
 libraries = {
 &"": SubResource("AnimationLibrary_phioh")
 }
+autoplay = "coin"
 
 [node name="Sprite2D" type="Sprite2D" parent="Node2D"]
 texture = ExtResource("1_h1e5f")
@@ -59,3 +62,5 @@ region_rect = Rect2(0, 0, 16, 16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_44o3b")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
