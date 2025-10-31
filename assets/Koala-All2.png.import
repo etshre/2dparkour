@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dig02jt63ag6o"
-path="res://.godot/imported/IMG_1608.PNG-277a2b87157b931df0e5a894993cdcac.ctex"
+uid="uid://c28i7comlv4it"
+path="res://.godot/imported/Koala-All2.png-c717b489e7bedab09ce7a7682cfd5eb1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://archivekeeper/sprites/IMG_1608.PNG"
-dest_files=["res://.godot/imported/IMG_1608.PNG-277a2b87157b931df0e5a894993cdcac.ctex"]
+source_file="res://archivekeeper/assets/Koala-All2.png"
+dest_files=["res://.godot/imported/Koala-All2.png-c717b489e7bedab09ce7a7682cfd5eb1.ctex"]
 
 [params]
 
