@@ -1,0 +1,72 @@
+[gd_scene load_steps=5 format=3 uid="uid://pbeiombpg0i5"]
+
+[ext_resource type="Script" uid="uid://owtonafsff5g" path="res://levels.gd" id="1_ssd3l"]
+[ext_resource type="Texture2D" uid="uid://djw721505tyrj" path="res://archivekeeper/assets/game cover.png" id="2_h6hgu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_53njt"]
+texture = ExtResource("2_h6hgu")
+modulate_color = Color(0.643981, 0.643981, 0.643981, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cujv0"]
+bg_color = Color(0.429132, 0.398067, 0.492115, 1)
+
+[node name="levels" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ssd3l")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -1.0
+offset_top = -3.0
+offset_right = 1151.0
+offset_bottom = 645.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_53njt")
+
+[node name="BoxContainer" type="BoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 119.0
+offset_top = 77.0
+offset_right = -113.0
+offset_bottom = -409.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button1" type="Button" parent="BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 54
+theme_override_styles/normal = SubResource("StyleBoxFlat_cujv0")
+text = "1"
+
+[node name="Button2" type="Button" parent="BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 54
+theme_override_styles/normal = SubResource("StyleBoxFlat_cujv0")
+text = "2"
+
+[node name="Button3" type="Button" parent="BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 54
+theme_override_styles/normal = SubResource("StyleBoxFlat_cujv0")
+text = "3"
+
+[node name="Button4" type="Button" parent="BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 54
+theme_override_styles/normal = SubResource("StyleBoxFlat_cujv0")
+text = "4"
+
+[connection signal="pressed" from="BoxContainer/Button1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="BoxContainer/Button2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="BoxContainer/Button3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="BoxContainer/Button4" to="." method="_on_level_4_pressed"]

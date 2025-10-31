@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://du3sa2w88e0ah"]
+[gd_scene load_steps=9 format=3 uid="uid://du3sa2w88e0ah"]
 
 [ext_resource type="Texture2D" uid="uid://6rpxof2aqo3i" path="res://archivekeeper/assets/freetileset.png" id="1_ci4ng"]
 [ext_resource type="PackedScene" uid="uid://b10kc4l1g0a5j" path="res://archivekeeper/scenes/player.tscn" id="2_cq01y"]
 [ext_resource type="PackedScene" uid="uid://dxluav75ys0hn" path="res://archivekeeper/scenes/functionality/area_exit.tscn" id="3_y4d02"]
 [ext_resource type="PackedScene" uid="uid://bnoro1i7abbqb" path="res://archivekeeper/scenes/coin.tscn" id="4_ujjhx"]
+[ext_resource type="Script" uid="uid://bjedtpx6il154" path="res://archivekeeper/scripts/death_zone.gd" id="5_18wfp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cq01y"]
 texture = ExtResource("1_ci4ng")
@@ -1443,6 +1444,9 @@ terrain_set_0/terrain_1/name = "ground"
 terrain_set_0/terrain_1/color = Color(0.267772, 0.508571, 0.242805, 1)
 sources/0 = SubResource("TileSetAtlasSource_cq01y")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hi5bd"]
+size = Vector2(864, 53)
+
 [node name="AreaTemplate" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -1471,3 +1475,12 @@ position = Vector2(-4, -44)
 
 [node name="Coin4" parent="Coins" instance=ExtResource("4_ujjhx")]
 position = Vector2(14.6667, -42.6667)
+
+[node name="DeathZone" type="Area2D" parent="."]
+script = ExtResource("5_18wfp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
+position = Vector2(175, 78.5)
+shape = SubResource("RectangleShape2D_hi5bd")
+
+[connection signal="body_entered" from="DeathZone" to="DeathZone" method="_on_body_entered"]

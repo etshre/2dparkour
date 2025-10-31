@@ -5,6 +5,7 @@ var area_path = "res://archivekeeper/scenes/areas/"
 
 var coins = 0
 
+
 func _ready():
 	reset_coins()
 
