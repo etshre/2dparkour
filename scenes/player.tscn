@@ -1,23 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://b10kc4l1g0a5j"]
+[gd_scene load_steps=7 format=3 uid="uid://b10kc4l1g0a5j"]
 
 [ext_resource type="Script" uid="uid://c34mcaafb3x8d" path="res://archivekeeper/scripts/player_controller.gd" id="1_fcm6d"]
 [ext_resource type="Texture2D" uid="uid://c28i7comlv4it" path="res://archivekeeper/assets/Koala-All2.png" id="1_mk1vu"]
 [ext_resource type="Script" uid="uid://dxpjdtkvg7sjw" path="res://archivekeeper/scripts/player_animator.gd" id="2_u4uwq"]
-
-[sub_resource type="Animation" id="Animation_u4uwq"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("PlayerAnimator/Sprite2D:region_rect")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Rect2(0, 32, 16, 16)]
-}
 
 [sub_resource type="Animation" id="Animation_fcm6d"]
 resource_name = "idle"
@@ -38,8 +23,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_a5fw4"]
 _data = {
-&"RESET": SubResource("Animation_u4uwq"),
-&"walk_right": SubResource("Animation_fcm6d")
+&"move": SubResource("Animation_fcm6d")
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fcm6d"]
@@ -55,14 +39,18 @@ jump_power = 8.0
 offset = Vector2(0, -15)
 zoom = Vector2(6, 6)
 
-[node name="PlayerAnimator" type="Node2D" parent="."]
+[node name="PlayerAnimator" type="Node2D" parent="." node_paths=PackedStringArray("player_controller", "animation_player", "sprite")]
 script = ExtResource("2_u4uwq")
+player_controller = NodePath("..")
+animation_player = NodePath("AnimationPlayer")
+sprite = NodePath("Sprite2D")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerAnimator"]
 root_node = NodePath("../..")
 libraries = {
 &"": SubResource("AnimationLibrary_a5fw4")
 }
+speed_scale = 3.0
 
 [node name="Sprite2D" type="Sprite2D" parent="PlayerAnimator"]
 position = Vector2(0, -8)
